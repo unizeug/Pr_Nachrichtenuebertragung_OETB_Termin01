@@ -73,13 +73,6 @@ geübt und einige wichtige Signale implementiert und untersucht.
    		 \end{quote}  	
 	\end{quote}
          	
-
-%           \begin{figure}[H]
-%    			\centering
-%    				\includegraphics[scale=0.5]{DNL}
-%    		\end{figure}
-%    		\vspace{1em}
-
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------            
 \section{Praktische Aufgaben}
@@ -87,36 +80,219 @@ geübt und einige wichtige Signale implementiert und untersucht.
     \begin{quote}
         \subsection{Übungen für den Umgang mit MatLab}
 		\begin{quote}
-		
-		Um schnellstmöglich den Umgang mit MatLab zu erlernen, wurde uns eine Datei
-		names rechteck.m und Aufgabe1.m vorgegeben. Damit konnten wir einen
-		Rechtecksignal der Spannung mit einer Amplitude von 2V und einer
-		vorgegebenen Länge simulieren.
-		
-		\vspace{1em}
-		
-		Als nächstes wurde der Frequenzbereich für die
-		Spektren im Code von Aufgabe1.m so verändert, dass wir den Bereich zwischen $0$
-		und $4kHz$ darstellen konnten. Dazu wurden die Achsenwerte für die x-Achse
-		(Frequenzbereich) und für die y-Achse (Amplituden) in den plot Befehlen
-		überarbeitet.\\
-		Außerdem haben wir untersucht, welche Auswirkunden die Veränderung des
-		Tastgrads $\alpha$ hat. Die Spektren und Amplituden wurden für die Werte der
-		folgenden Tabelle simuliert und untersucht.
-		
-		\vspace{1em}
-		
-			\begin{center}
-                 \begin{tabular}{|c|c|c|c|}
-                     
-                  \hline
-                   $\alpha $ & $f[Hz]$ & Amplitude $[V]$ & Signaldauer
-                   $T_{ges}[s]$\\ \hline
-                   0.1 & 50 & 2 & 0.5 \\ \hline
-                   0.5 & 50 & 2 & 0.5 \\ \hline
-                   0.9 & 50 & 2 & 0.5 \\ \hline           
-   
-                 \end{tabular}
+    		\subsubsection{Rechteck}
+            \begin{quote}
+                Um schnellstmöglich den Umgang mit MatLab zu erlernen, wurde uns eine Datei
+                names rechteck.m und Aufgabe1.m vorgegeben. Damit konnten wir einen
+                Rechtecksignal der Spannung mit einer Amplitude von 2V und einer
+                vorgegebenen Länge simulieren.\\
+                Dieses Signal wird anschließend Fourier transformiert. Dannach werden das Signal im Zeitbereich sowie der
+                Amplitudengang und der Phasengang des Fourier transformierten Signals geplottet 
+                
+                \vspace{1em}
+                
+                Als nächstes wurde der Frequenzbereich für die
+                Spektren im Code von Aufgabe1.m so verändert, dass wir den Bereich zwischen $0$
+                und $4kHz$ darstellen konnten. Dazu wurden die Achsenwerte für die x-Achse
+                (Frequenzbereich) und für die y-Achse (Amplituden) in den plot Befehlen
+                überarbeitet.\\
+                Außerdem haben wir untersucht, welche Auswirkunden die Veränderung des
+                Tastgrads $\alpha$ hat. Die Spektren und Amplituden wurden für die Werte der
+                folgenden Tabelle simuliert und untersucht.
+                
+                \vspace{1em}
+                
+                    \begin{center}
+                         \begin{tabular}{|c|c|c|c|}
+                             
+                          \hline
+                           $\alpha $ & $f[Hz]$ & Amplitude $[V]$ & Signaldauer
+                           $T_{ges}[s]$\\ \hline
+                           0.1 & 50 & 2 & 0.5 \\ \hline
+                           0.5 & 50 & 2 & 0.5 \\ \hline
+                           0.9 & 50 & 2 & 0.5 \\ \hline           
+           
+                         \end{tabular}
+                     \end{center}
+                  \vspace{1em}
+                
+                Als nächstes wurde die Amplitude so umgestellt, dass sie in dB angegeben
+                wurde. Dies realisierten wir mit der ``log'' Funktion in MatLab, die die
+                Umrechnung des Betragsspektrums ermöglicht.\\
+                Die Funktion lautete dementsprechend:\\
+                
+                \begin{equation*}
+                    \begin{split}
+                        y_{DFT}_{abs} = 10*LOG10(abs(y_DFT)/N);     
+                    \end{split}
+                \end{equation*}
+        
+                Mit der ``ylim'' Funktion konnten wir dann die y-Achse zwischen $-30 dB$
+                und $5 dB$ limitieren. Dafür verwendeten wir das Kommando:\\
+                
+                \begin{center}
+                
+                \begin{align*}
+                    ylim ([-30 \ 5]);
+                \end{align*}
+                
+                \end{center}
+                
+                Der komplette Code rechteck.m und Aufgabe1.m ist im Anhang zu finden.\\
+                
+            \end{quote}
+            
+            \subsubsection{Dreieck}
+            \begin{quote}
+                Nachdem das Rechecksignal abgeschlossen wurde, schreiben wir diesen Code zu
+                einer dreieck.m Datei um. Das Ziel dabei war es die Funktion so zu
+                modifizieren, dass eine bipolare Dreickfolge erstellt wurde. Der Taskgrad
+                $\alpha$ sollte wieder variabel mit den Werten $\alpha = 0.1$, $\alpha = 0.5$
+                und $\alpha = 0.9$ sein. Dies gelang uns, indem wir die if-Bedingungen in der
+                rechteck.m Datei wie folgt umschrieben:
+    
+\begin{lstlisting}
+if(t_{rel} < alpha*T_{periode})
+res(k) = -A+((2*A)*t_{rel}/(alpha*T_{periode}));
+else
+res(k) = A+((alpha*T_{periode}*2*A)/((1-alpha)*T_{periode}))
+         -((2*A)*t_{rel}/((1-alpha)*T_{periode}));
+\end{lstlisting}  
+                
+                \vspace{1em}
+                
+                Die erste Bedingung beschreibt die aufsteigende Gerade solange die
+                Laufvariable kleiner ist als $\alpha \cdot T_{periode}$. Falls diese Bedingung
+                nicht erfüllt ist, das heißt, die Laufvariable ist größer, wird die Kurve mit
+                der abfallenden Gerade fortgesetzt. Wichtig bei der Modifizierung war es, die Steigungen 
+                und die y-Achsenabschnitte der Getraden korrekt zu bestimmen, damit das
+                simulierte Ergebnis nicht verzerrt oder falsch wurde.
+                
+                Wir führten die Simulation mit den Tastgradwerten $\alpha = 0.3$, $\alpha = 0.5$
+                und $\alpha = 0.9$ durch.
+                
+                Der vollständige Code zu dreieck.m ist im Anhang zu finden.
+                
+            \end{quote}
+            
+            \subsubsection{Cosinus}
+            \begin{quote}
+                Nach dem Dreiecksignal wurde die rechteck.m Datei nochmal so modifiziert, dass
+                es eine bipolare Cosinusfolge erstellte.
+                Dazu wurde der Zeitbereich in zwei Teile aufgeteilt, einmal in $t_{rel} <
+                \alpha T_p$ und einmal in $t_{rel} > \alpha T_p$. Die Folge wurde mit den
+                folgenden Funktionen beschrieben:\\
+            
+\begin{lstlisting}
+if(t_rel < alpha*T_periode)
+   res(k) = (A*cos((pi*t_rel)/(alpha*T_periode)));
+else
+   res(k) = (-A*cos((pi*(t_rel-alpha*T_periode))/((1-alpha)*T_periode)));
+\end{lstlisting} 
+            
+                Erneut wurde das Ergebnis mit drei unterschiedlichen Tastgraden simuliert.\\
+                
+                Auch der Code zu cosinus.m ist im Anhang zu finden.\\
+                
+            \end{quote}
+        \end{quote}
+
+
+    
+        
+        
+	
+\subsection{Ergebnisse}
+\begin{quote}
+    \subsection{Rechteckesignal}
+    \begin{quote}
+                %4 Grafiken:
+            \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-12em}
+                \begin{minipage}{0.6\textwidth}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha1.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - Simuliert}
+                    \end{figure}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha5.png} %FIXME [width=640px, height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - Simuliert}
+                    \end{figure}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha9.png} %FIXME [width=640px, height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - Simuliert}
+                    \end{figure}
+
+                
+                \end{minipage}
+
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - gemessen}
+                    \end{figure}                
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - gemessen}
+                    \end{figure}                
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - gemessen}
+                    \end{figure}                
+                
+                \end{minipage}
+                        
+            \end{tabular}
+            \end{center}
+        
+    \end{quote}
+    
+    \subsection{Dreiecksignal}
+    \begin{quote}
+        
+    \end{quote}
+    
+    \subsection{Cosinussignal}
+    \begin{quote}
+        
+    \end{quote}
+
+
+    
+    
+
+
+    
+        
+\end{quote}
+
+
+
+
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------            
+	
+	
+	
 		
 	           \begin{figure}[H]
     			\centering
@@ -152,27 +328,7 @@ geübt und einige wichtige Signale implementiert und untersucht.
 		
 		\vspace{1em}
 		
-		Als nächstes wurde die Amplitude so umgestellt, dass sie in dB angegeben
-		wurde. Dies realisierten wir mit der ``log'' Funktion in MatLab, die die
-		Umrechnung des Betragsspektrums ermöglicht.\\
-		Die Funktion lautete dementsprechend:\\
 		
-        \begin{equation*}
-        	\begin{split}
-                y_{DFT}_{abs} = 10*LOG10(abs(y_DFT)/N);		
-        	\end{split}
-        \end{equation*}
-
-		Mit der ``ylim'' Funktion konnten wir dann die y-Achse zwischen $-30 dB$
-		und $5 dB$ limitieren. Dafür verwendeten wir das Kommando:\\
-		
-		\begin{center}
-		
-		\begin{align*}
-    		ylim ([-30 5]);
-		\end{align*}
-		
-		\end{center}
 
 		Die enstandenen Sprektren waren diese:
 		
@@ -185,35 +341,9 @@ geübt und einige wichtige Signale implementiert und untersucht.
 		
 		\vspace{1em}
 		
-		Der komplette Code rechteck.m und Aufgabe1.m ist im Anhang zu finden.\\
 		
 		
-		Nachdem das Rechecksignal abgeschlossen wurde, schreiben wir diesen Code zu
-		einer dreieck.m Datei um. Das Ziel dabei war es die Funktion so zu
-		modifizieren, dass eine bipolare Dreickfolge erstellt wurde. Der Taskgrad
-		$\alpha$ sollte wieder variabel mit den Werten $\alpha = 0.1$, $\alpha = 0.5$
-		und $\alpha = 0.9$ sein. Dies gelang uns, indem wir die if-Bedingungen in der
-		rechteck.m Datei wie folgt umschrieben:
-
-\begin{lstlisting}
-if(t_{rel} < alpha*T_{periode})
-res(k) = -A+((2*A)*t_{rel}/(alpha*T_{periode}));
-else
-res(k) = A+((alpha*T_{periode}*2*A)/((1-alpha)*T_{periode}))
-         -((2*A)*t_{rel}/((1-alpha)*T_{periode}));
-\end{lstlisting}  
-		
-		\vspace{1em}
-		
-		Die erste Bedingung beschreibt die aufsteigende Gerade solange die
-		Laufvariable kleiner ist als $\alpha \cdot T_{periode}$. Falls diese Bedingung
-		nicht erfüllt ist, das heißt, die Laufvariable ist größer, wird die Kurve mit
-		der abfallenden Gerade fortgesetzt. Wichtig bei der Modifizierung war es, die Steigungen 
-		und die y-Achsenabschnitte der Getraden korrekt zu bestimmen, damit das
-		simulierte Ergebnis nicht verzerrt oder falsch wurde.
-		
-		Wir führten die Simulation mit den Tastgradwerten $\alpha = 0.3$, $\alpha = 0.5$
-		und $\alpha = 0.9$ durch. Die Ergebnisse folgen:
+ Die Ergebnisse folgen:
 			
 		Dies sind die Spektren mit $\alpha = 0.3$\ldots
 			
@@ -259,24 +389,10 @@ res(k) = A+((alpha*T_{periode}*2*A)/((1-alpha)*T_{periode}))
 		
 		\vspace{1em}
 		
-		Der vollständige Code zu dreieck.m ist im Anhang zu finden.
 		
 		\vspace{1em}
 		
-		Nach dem Dreiecksignal wurde die rechteck.m Datei nochmal so modifiziert, dass
-		es eine bipolare Cosinusfolge erstellte.
-		Dazu wurde der Zeitbereich in zwei Teile aufgeteilt, einmal in $t_{rel} <
-		\alpha T_p$ und einmal in $t_{rel} > \alpha T_p$. Die Folge wurde mit den
-		folgenden Funktionen beschrieben:\\
-		
-\begin{lstlisting}
-if(t_rel < alpha*T_periode)
-   res(k) = (A*cos((pi*t_rel)/(alpha*T_periode)));
-else
-   res(k) = (-A*cos((pi*(t_rel-alpha*T_periode))/((1-alpha)*T_periode)));
-\end{lstlisting} 
-		
-		Erneut wurde das Ergebnis mit drei unterschiedlichen Tastgraden simuliert. Die
+ Die
 		Ergebnisse ware diese:
 		
 		Simulation mit $\alpha = 0.1$: \ldots
