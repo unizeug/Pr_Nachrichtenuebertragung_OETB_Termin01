@@ -219,7 +219,303 @@ else
     Fouiertransformiert und geplottet. Im nächsten Abschnitt werden diese Ergebnisse mit den Simulierten Ergebnissen
     verglichen.\\
     
+    Außerdem wurde von allen neun Signalen der RMS gemessen. 
     
+    
+    \end{quote}     
+\begin{quote}       
+\end{quote} 
+
+
+\end{quote}
+    
+        
+        
+	
+\subsection{Ergebnisse}
+\begin{quote}
+    \subsection{Rechteckesignal}
+    \begin{quote}
+        Zuerst vergleichen wir das Rechtecksignal. Wie in der Vorbereitungsaufgabe beschieben erwarten wir bei der
+        Fouriertransformierten eine Si-Funktion im Amplitudenfrequenzgang.
+
+\TODO{Die graphiken trennen}
+                %4 Grafiken:
+            \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-12em}
+                \begin{minipage}{0.6\textwidth}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha1.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - Simuliert}
+                    \end{figure}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha5.png} %FIXME [width=640px, height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - Simuliert}
+                    \end{figure}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/recht_alpha9.png} %FIXME [width=640px, height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - Simuliert}
+                    \end{figure}
+
+                
+                \end{minipage}
+
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - gemessen}
+                    \end{figure}                
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha5_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - gemessen}
+                    \end{figure}                
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/recht_alpha9_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - gemessen}
+                    \end{figure}                
+                
+                \end{minipage}
+                        
+            \end{tabular}
+            \end{center}
+            
+            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
+            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
+            wurden, die simulierten jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
+            übereinanderlegen.\\
+            Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
+            zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
+            Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
+            
+            Da die Leistung sich proportional zu der Fläche des Signals verhält steigt bei dem Rechtecksignal die
+            Leistung mit steigendem $\alpha$.
+                     
+            \hspace{-4em}
+                  \begin{tabular}{|c|c|c|c|c|c|c|}
+                  \hline
+                   $\alpha $ &  Mittelwert [mV] \\ \hline 
+                   0.1 &  529 \\ \hline
+                   0.5 &  833 \\ \hline
+                   0.9 &  955 \\ \hline           
+                 \end{tabular}
+                       \caption{RMS des Rechtecksignals}
+                        \label{tablelabel1}
+        
+    \end{quote}
+    
+    \subsection{Dreiecksignal}
+    \begin{quote}
+\TODO{Den Text an das Dreieck anpassen}
+        Zuerst vergleichen wir das Rechtecksignal. Wie in der Vorbereitungsaufgabe beschieben erwarten wir bei der
+        Fouriertransformierten eine Si-Funktion im Amplitudenfrequenzgang.
+
+\TODO{Die Graphiken trennen}        
+                %4 Grafiken:
+            \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-12em}
+                \begin{minipage}{0.6\textwidth}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/drei_alpha1.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,1$ - Simuliert}
+                    \end{figure}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/drei_alpha5.png} %FIXME [width=640px, height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,5$ - Simuliert}
+                    \end{figure}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/drei_alpha9.png} %FIXME [width=640px, height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,9$ - Simuliert}
+                    \end{figure}
+
+                
+                \end{minipage}
+
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/drei_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,1$ - gemessen}
+                    \end{figure}                
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/drei_alpha5_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,5$ - gemessen}
+                    \end{figure}                
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/drei_alpha9_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Dreiecksignalspektrum für $\aplpha = 0,9$ - gemessen}
+                    \end{figure}                
+                
+                \end{minipage}
+                        
+            \end{tabular}
+            \end{center}
+            
+            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
+            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
+            wurden, die simulierten jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
+            übereinanderlegen.\\
+            Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
+            zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
+            Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
+            
+            Da die Leistung sich proportional zu der Fläche des Signals verhält steigt bei dem Rechtecksignal die
+            Leistung mit steigendem $\alpha$.
+
+\TODO{Die werte anpassen}
+                     
+            \hspace{-4em}
+                  \begin{tabular}{|c|c|c|c|c|c|c|}
+                  \hline
+                   $\alpha $ &  Mittelwert [mV] \\ \hline 
+                   0.1 &  529 \\ \hline
+                   0.5 &  833 \\ \hline
+                   0.9 &  955 \\ \hline           
+                 \end{tabular}
+                       \caption{RMS des Rechtecksignals}
+                        \label{tablelabel1}
+        
+    \end{quote}
+    
+    \subsection{Cosinussignal}
+    \begin{quote}
+\TODO{Den Text an den Cosinus anpassen}
+        Zuerst vergleichen wir das Rechtecksignal. Wie in der Vorbereitungsaufgabe beschieben erwarten wir bei der
+        Fouriertransformierten eine Si-Funktion im Amplitudenfrequenzgang.
+        
+\TODO{Die graphiken trenne}
+                %4 Grafiken:
+            \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-12em}
+                \begin{minipage}{0.6\textwidth}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/cos_alpha1.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Cosinussignalspektrum für $\aplpha = 0,1$ - Simuliert}
+                    \end{figure}
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/cos_alpha5.png} %FIXME [width=640px, height=474px]
+                        \caption{Cosinussignalspektrum für $\aplpha = 0,5$ - Simuliert}
+                    \end{figure}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.25]{./Bilder/cos_alpha9.png} %FIXME [width=640px, height=474px]
+                        \caption{Cosinssignalspektrum für $\aplpha = 0,9$ - Simuliert}
+                    \end{figure}
+
+                
+                \end{minipage}
+
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/cos_alpha1_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Cosinussignalspektrum für $\aplpha = 0,1$ - gemessen}
+                    \end{figure}                
+                    
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/cos_alpha5_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Cosinussignalspektrum für $\aplpha = 0,5$ - gemessen}
+                    \end{figure}                
+
+                    \begin{figure}[H]
+                        \label{fig:}            
+                        \includegraphics[scale=0.3]{./Bilder/cos_alpha9_-_gemessen.png} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{Cosinussignalspektrum für $\aplpha = 0,9$ - gemessen}
+                    \end{figure}                
+                
+                \end{minipage}
+                        
+            \end{tabular}
+            \end{center}
+            
+            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
+            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
+            wurden, die simulierten jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
+            übereinanderlegen.\\
+            Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
+            zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
+            Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
+            
+            Da die Leistung sich proportional zu der Fläche des Signals verhält steigt bei dem Rechtecksignal die
+            Leistung mit steigendem $\alpha$.
+                     
+\TODO{Die werte anpassen}                     
+            \hspace{-4em}
+                  \begin{tabular}{|c|c|c|c|c|c|c|}
+                  \hline
+                   $\alpha $ &  Mittelwert [mV] \\ \hline 
+                   0.1 &  529 \\ \hline
+                   0.5 &  833 \\ \hline
+                   0.9 &  955 \\ \hline           
+                 \end{tabular}
+                       \caption{RMS des Rechtecksignals}
+                        \label{tablelabel1}
+        
+    \end{quote}
+
+
+    
+    
+
+
+    
+        
+\end{quote}
+
+
+
+
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------            
+tabelle
     Zuletzt wurde noch als Maß für die Leistung der Signale jeweils auch der
     Wechselstrom RMS aufgenommen. Die Tabellen für diese Messungen folgen hier:
     
@@ -272,263 +568,9 @@ else
                         \label{tablelabel3}
             
     
-    \end{quote}     
-\begin{quote}       
-\end{quote} 
-
-
-\end{quote}
-    
-        
-        
-	
-\subsection{Ergebnisse}
-\begin{quote}
-    \subsection{Rechteckesignal}
-    \begin{quote}
-                %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-12em}
-                \begin{minipage}{0.6\textwidth}
-                    
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.25]{./Bilder/recht_alpha1.png} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - Simuliert}
-                    \end{figure}
-                    
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.25]{./Bilder/recht_alpha5.png} %FIXME [width=640px, height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - Simuliert}
-                    \end{figure}
-
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.25]{./Bilder/recht_alpha9.png} %FIXME [width=640px, height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - Simuliert}
-                    \end{figure}
-
-                
-                \end{minipage}
-
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,1$ - gemessen}
-                    \end{figure}                
-                    
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,5$ - gemessen}
-                    \end{figure}                
-
-                    \begin{figure}[H]
-                        \label{fig:}            
-                        \includegraphics[scale=0.3]{./Bilder/recht_alpha1_-_gemessen.png} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Rechtecksignalspektrum für $\aplpha = 0,9$ - gemessen}
-                    \end{figure}                
-                
-                \end{minipage}
-                        
-            \end{tabular}
-            \end{center}
-        
-    \end{quote}
-    
-    \subsection{Dreiecksignal}
-    \begin{quote}
-        
-    \end{quote}
-    
-    \subsection{Cosinussignal}
-    \begin{quote}
-        
-    \end{quote}
-
-
-    
-    
-
-
-    
-        
-\end{quote}
-
-
-
-
-
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------            
-	
-	
-	
-		
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{recht_alpha1.png}
-    			\caption{Rechecktsignalspektren für $\alpha = 0.1$}
-    				\end{figure}		
-		\end{center}
-		
-		Für $\alpha = 0.1$ kann man sehen, dass die Signallängen im Zeitbereich
-		deutlich kürzer geworden sind. An der Amplitude ändert sich dabei nichts.
-		Dafür ist im Amplitudenspektrum \ldots
-		
-		\begin{center}
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{recht_alpha5.png}
-    			\caption{Rechecktsignalspektren für $\alpha = 0.5$}		
-    			\end{figure}		
-    			\end{center}
-		
-		Für $\alpha = 0.5$ kann man dagegen sehen \ldots
-		
-		
-		\begin{center}
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{recht_alpha9.png}
-    			\caption{Rechecktsignalspektren für $\alpha = 0.9$}		
-    			\end{figure}
-		\end{center}
-		
-		Zuletzt sieht man in den Spektren für $\alpha = 0.9$, dass \ldots
-		
-		\vspace{1em}
-		
-		
 
-		Die enstandenen Sprektren waren diese:
-		
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{Ampl[dB].png}
-    			\caption{Amplitudenspektrum in dB mit limitierter y-Achse}
-    			\end{figure}		
-		
-		
-		\vspace{1em}
-		
-		
-		
- Die Ergebnisse folgen:
-			
-		Dies sind die Spektren mit $\alpha = 0.3$\ldots
-			
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{drei_alpha3.png}
-    			\caption{Dreiecksignalspektren für $\alpha = 0.3$}
-    			\end{figure}		
-		
-		\end{center}
-		
-		
-		
-		\vspace{1em}
-		
-		Dies sind die Spektren mit $\alpha = 0.5$\ldots
-		
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{drei_alpha5.png}
-    			\caption{Dreiecksignalspektren für $\alpha = 0.5$}
-    			\end{figure}		
-		
-		\end{center}
-		
-		\vspace{1em}
-		
-		Und dies sind die Spektren mit $\alpha = 0.9$\ldots
-		
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{drei_alpha9.png}
-    				\caption{Dreiecksignalspektren für $\alpha = 0.9$}
-    			\end{figure}		
-		
-		\end{center}
-		
-		\vspace{1em}
-		
-		
-		\vspace{1em}
-		
- Die
-		Ergebnisse ware diese:
-		
-		Simulation mit $\alpha = 0.1$: \ldots
-	
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{cos_alpha1.png}
-    				\caption{Cosinussignalspektren für $\alpha = 0.1$}
-    			\end{figure}	
-    			\caption{}	
-		
-		\end{center}
-		
-		\vspace{1em}
-		
-		Simulation mit $\alpha = 0.5$: \ldots
-		
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-    				\includegraphics[scale=0.5]{cos_alpha5.png}
-    			\caption{Cosinussignalspektren für $\alpha = 0.5$}
-    			\end{figure}		
-		
-		\end{center}
-		
-		\vspace{1em}
-		
-		Simulation mit $\alpha = 0.9$: \ldots
-		
-		\begin{center}
-	    
-	           \begin{figure}[H]
-    			\centering
-%    				\includegraphics[scale=0.5]{./Bilder/cos_alpha9.png}
-                    \includegraphics[scale=0.5]{cos_alpha9}
-    			\caption{Cosinussignalspektren für $\alpha = 0.9$}
-    			\end{figure}	
-		
-		\end{center}
-	\begin{quote}	
-	\end{quote}
-	
-
-
-
-
-%    	\begin{quote}
-%            \begin{enumerate}
-%      			\item 
-%		   \end{enumerate}
-%		\end{quote}
-%	\end{quote}
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
