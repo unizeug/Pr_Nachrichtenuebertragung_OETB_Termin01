@@ -196,8 +196,88 @@ else
                 
             \end{quote}
         \end{quote}
+        
+    \subsection{Übungen für den Umgang mit USB-Oszilloskop und Funktionsgenerator}  
+    \begin{quote}
+    
+    Die Bearbeitung der kommenden Aufgaben diente dazu, um einen Einblick in die
+    grundlegenden Funktionen und die Funktionsweise des USB-Oszilloskops und des
+    Funktionsgenerators. Für den Aufbau reichte es den Ausgang des
+    Funktionsgenerator mit hilfe eines Koaxialkabels mit dem A-Kanal-Eingang des Oszillioskops 
+    zu verbinden.\\
+    
+    Als erstes wurde dann am Funktionsgenerator eine $100 Hz$
+    Sinusschwingung mit einer Amplitude von grob $2V$ eingestellt. Die Darstellung am
+    Oszilloskop wurde zunächst mit dem ``Automatische-Einrichtung''-Button im
+    Oszilloskopfenster skaliert. Danach konnten wir mit dem entsprechenden Button
+    die steigende Flanke des Eingangssignals triggern und die Zeit- und
+    Amplitudenauflösung des Oszilloskops verändern um mit den Einstellungen des
+    PicoScopes vertrauter zu werden.\\
+    
+    Mit dem Funktionsgenerator wurde jeweils ein Rechteck- ein Dreieck- und ein Sinussignal erzeugt, mit dem
+    USB-Oszilloskop aufgenommen und anschließend als .mat abgespeichert. Diese Ergebnisse wurden anschließend in Mathlab
+    Fouiertransformiert und geplottet. Im nächsten Abschnitt werden diese Ergebnisse mit den Simulierten Ergebnissen
+    verglichen.\\
+    
+    
+    Zuletzt wurde noch als Maß für die Leistung der Signale jeweils auch der
+    Wechselstrom RMS aufgenommen. Die Tabellen für diese Messungen folgen hier:
+    
+    \underline{Rechtecksignal}
+        
+            \hspace{-4em}
+                  \begin{tabular}{|c|c|c|c|c|c|c|}
+                  \hline
+                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert
+                   [mV] & Standardabweichung & Aufzeichnungzähler\\ \hline 
+                   0.1 & 530 & 529 & 530 & 529 & 200 $\mu$ V & 20 \\ \hline
+                   0.5 & 833 & 833 & 833 & 833 & 1040 mV & 20 \\ \hline
+                   0.9 & 955 & 955 & 955 & 955 & 188 $\mu$ V & 3 \\ \hline           
+                 \end{tabular}
+                       \caption{Rechecktsignal bei einer Wechselspannung RMS}
+                        \label{tablelabel1}
+        
+ 
+    \vspace{1.5em}
+                 
+    \underline{Dreiecksignal}
+        
+            \hspace{-4em}           
+                 \begin{tabular}{|c|c|c|c|c|c|c|}                 
+                  \hline
+                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert [mV]
+                   & Standardabweichung & Aufzeichnungzähler\\ \hline 
+                   0.1 & 567 & 566 & 568 & 567 & 500 $\mu$ V & 20 \\ \hline
+                   0.5 & 567 & 566 & 566 & 566 & 421 $\mu$ V & 20 \\ \hline
+                   0.9 & 567 & 567 & 567 & 567 & 0 $\mu$ V & 1 \\ \hline
+                 \end{tabular}
+                       \caption{Dreiecktsignal bei einer Wechselspannung RMS}
+                        \label{tablelabel2}
+             
+     
+    \vspace{1.5em}
+             
+    \underline{Sinussignal}
+        
+            \hspace{-4em}                 
+                 \begin{tabular}{|c|c|c|c|c|c|c|}
+                  \hline
+                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert [mV]
+                   & Standardabweichung & Aufzeichnungzähler\\ \hline 
+                   0.1 & 700 & 700 & 700 & 700 & 650 $\mu$ V & 20 \\ \hline
+                   0.5 & 705 & 705 & 705 & 705 & 447 $\mu$ V & 8 \\ \hline
+                   0.9 & 706 & 706 & 706 & 706 & 0 $\mu$ V & 1 \\ \hline
+                 \end{tabular}          
+                       \caption{Cosinussignal bei einer Wechselspannung RMS}
+                        \label{tablelabel3}
+            
+    
+    \end{quote}     
+\begin{quote}       
+\end{quote} 
 
 
+\end{quote}
     
         
         
@@ -436,92 +516,9 @@ else
     			\end{figure}	
 		
 		\end{center}
-		
+	\begin{quote}	
 	\end{quote}
 	
-	\subsection{Übungen für den Umgang mit USB-Oszilloskop und Funktionsgenerator}	
-	\begin{quote}
-	
-	Die Bearbeitung der kommenden Aufgaben diente dazu, um einen Einblick in die
-	grundlegenden Funktionen und die Funktionsweise des USB-Oszilloskops und des
-	Funktionsgenerators. Für den Aufbau reichte es den Ausgang des
-	Funktionsgenerator mit hilfe eines Koaxialkabels mit dem A-Kanal-Eingang des Oszillioskops 
-	zu verbinden.\\
-	
-	Als erstes wurde dann am Funktionsgenerator eine 100 Hz
-	Sinusschwingung mit einer Amplitude von grob 2V eingestellt. Die Darstellung am
-	Oszilloskop wurde zunächst mit dem ``Automatische-Einrichtung''-Button im
-	Oszilloskopfenster skaliert. Danach konnten wir mit dem entsprechenden Button
-	die steigende Flanke des Eingangssignals triggern und die Zeit- und
-	Amplitudenauflösung des Oszilloskops verändern um mit den Einstellungen des
-	PicoScopes vertrauter zu werden.\\
-	
-	ZU AUFGABE VIER WEIß ICH NICHT MER VIEL\ldots
-	
-	Ein Ausschnitt des Zeitsignals aus jeweils dem Rechteck-, dem Dreieck- und dem
-	Sinussignal wurde als .mat-Datei abgespeichert. Die Zeitsignale wurden je
-	dreimal erstellt, da wieder die drei Tastgrade $\alpha = 0.1$, $\alpha =
-	0.5$ und $\alpha = 0.9$ eingegeben wurde. Das Abspeichern gelang uns durch den
-	Stop-Button den PicoScopes und der Möglichkeit die Werte der aktuellen Welle zu speichern. 
-	Die aufgenommenen .mat-Dateien sind im Anhang zu finden.
-	
-	\ldots (Interpretation?)
-	
-	Zuletzt wurde noch als Maß für die Leistung der Signale jeweils auch der
-	Wechselstrom RMS aufgenommen. Die Tabellen für diese Messungen folgen hier:
-	
-	\underline{Rechtecksignal}
-		
-			\hspace{-4em}
-                  \begin{tabular}{|c|c|c|c|c|c|c|}
-                  \hline
-                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert
-                   [mV] & Standardabweichung & Aufzeichnungzähler\\ \hline 
-                   0.1 & 530 & 529 & 530 & 529 & 200 $\mu$ V & 20 \\ \hline
-                   0.5 & 833 & 833 & 833 & 833 & 1040 mV & 20 \\ \hline
-                   0.9 & 955 & 955 & 955 & 955 & 188 $\mu$ V & 3 \\ \hline           
-                 \end{tabular}
-                       \caption{Rechecktsignal bei einer Wechselspannung RMS}
-                        \label{tablelabel1}
-        
- 
- 	\vspace{1.5em}
- 	             
-    \underline{Dreiecksignal}
-		
-            \hspace{-4em}           
-                 \begin{tabular}{|c|c|c|c|c|c|c|}                 
-                  \hline
-                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert [mV]
-                   & Standardabweichung & Aufzeichnungzähler\\ \hline 
-                   0.1 & 567 & 566 & 568 & 567 & 500 $\mu$ V & 20 \\ \hline
-                   0.5 & 567 & 566 & 566 & 566 & 421 $\mu$ V & 20 \\ \hline
-                   0.9 & 567 & 567 & 567 & 567 & 0 $\mu$ V & 1 \\ \hline
-                 \end{tabular}
-                       \caption{Dreiecktsignal bei einer Wechselspannung RMS}
-                        \label{tablelabel2}
-             
-     
- 	\vspace{1.5em}
- 	         
-    \underline{Sinussignal}
-		
-            \hspace{-4em}                 
-                 \begin{tabular}{|c|c|c|c|c|c|c|}
-                  \hline
-                   $\alpha $ & Wert [mV] & Min [mV] & Max [mV] & Mittelwert [mV]
-                   & Standardabweichung & Aufzeichnungzähler\\ \hline 
-                   0.1 & 700 & 700 & 700 & 700 & 650 $\mu$ V & 20 \\ \hline
-                   0.5 & 705 & 705 & 705 & 705 & 447 $\mu$ V & 8 \\ \hline
-                   0.9 & 706 & 706 & 706 & 706 & 0 $\mu$ V & 1 \\ \hline
-                 \end{tabular}          
-                       \caption{Cosinussignal bei einer Wechselspannung RMS}
-                        \label{tablelabel3}
-            
-	
-	\end{quote}		
-		
-\end{quote}	
 
 
 
