@@ -329,10 +329,10 @@ else
             \end{center}
 
                         
-            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
-            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
-            wurden, die gemessenen jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
-            übereinanderlegen.\\
+            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simulierten Graphen als
+            auch im den gemessenen Graphen erkennen. Da die simulierten Signale
+            bis zu Frequenzen von $4 kHz$ geplottet wurden, die gemessenen
+            jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt übereinanderlegen.\\
             Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
             zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
             Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
@@ -357,9 +357,8 @@ else
     
     \subsection{Dreiecksignal}
     \begin{quote}
-\TODO{Den Text an das Dreieck anpassen}
-        Zuerst vergleichen wir das Rechtecksignal. Wie in der Vorbereitungsaufgabe beschieben erwarten wir bei der
-        Fouriertransformierten eine Si-Funktion im Amplitudenfrequenzgang.
+    
+    	Nun betrachten wir die Ergebnisse des Dreiecksignals.
 
                         %4 Grafiken:
             \begin{center}
@@ -450,17 +449,21 @@ else
             \end{center}
 
             
-            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
-            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
-            wurden, die simulierten jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
-            übereinanderlegen.\\
-            Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
-            zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
-            Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
+            Ein Dreiecksignal lässt sich im Zeitbereich als eine Faltung von
+            zwei Rechtecksignalen darstellen. Überträgt man diese Faltung in den
+            Frequenzbereich, wird daraus eine Multiplikation zweier
+            si-Funktionen, wodurch ein Ergebnis von einer $si^2(x)$ Funktion
+            ensteht. Diese Erwartung wird im Amplitudenspektrum auch erfüllt.
+            Man sieht nämlich den Verlauf einer quadrierten si-Funktion ohne
+            negativen Anteil und mit wachsender Freuquenz gegen null strebender
+            Amplitude.\\
             
-            Da die Leistung sich proportional zu der Fläche des Signals verhält steigt bei dem Rechtecksignal die
-            Leistung mit steigendem $\alpha$.
-
+            Das $\alpha$ bewirkt lediglich nur eine Verschiebung des höchsten
+            Punktes im Zeitbereich. Dadurch verändert sich die Fläche unter dem
+            Dreicksignal nicht, wodurch auch die Leistung des Signals nicht
+            steigt. Dies kann man auch an den unveränderten RMS-Messwerten
+            sehen.
+           
                      
             \begin{center}
                   \begin{tabular}{|c|c|}
@@ -478,9 +481,9 @@ else
     
     \subsection{Cosinussignal}
     \begin{quote}
-\TODO{Den Text an den Cosinus anpassen}
-        Zuerst vergleichen wir das Rechtecksignal. Wie in der Vorbereitungsaufgabe beschieben erwarten wir bei der
-        Fouriertransformierten eine Si-Funktion im Amplitudenfrequenzgang.
+    
+    	Zuletzt wird das Cosinussignal mit den drei Tastgraden simuliert und
+    	durchgemessen.
         
         
                         %4 Grafiken:
@@ -572,17 +575,29 @@ else
             \end{center}
         
             
-            Die erwartete Si-Funktion im Amplitudenfrequenzgang lässt sich sowohl in den drei Simmulierten Graphen als
-            auch im den gemessenen Graphen erkennen. Da die Simmulierte Signale bis zu Frequenzen von $4 kHz$ geplottet
-            wurden, die simulierten jedoch nur um die $100 Hz$ lassen sich die 6 Graphen nicht direkt
-            übereinanderlegen.\\
-            Es lässt sich jedoch erkennen, dass die Si-Funktion für steigendes $\alpha$ immer schmaler wird. Der
-            zusammenhang liegt daran, dass das Zeitsignal mit steigendem $\alpha$ immer breiter wird. Und wenn ein
-            Signal im Zeitbereich breiter wird, wird es gleichzeitig im Frequenzbereich schmaler.\\
+            Bei einem $\alpha$ von $0.5$ ist der höchste Punkt des Signals genau
+            in der Mitte der Amplitude. Daher ensteht in der Simulation auch
+            auch ein unverzerrter Sinus im Zeitbereich und ein einzelner
+            Deltaimpuls im Frequenzbereich. Dieser Deltaimpuls ist auch in
+            der realen Messung relativ deutlich zu sehen, wodurch die
+            Erwartungen der Simulation in der Messung erfüllt werden.\\
             
-            Da die Leistung sich proportional zu der Fläche des Signals verhält steigt bei dem Rechtecksignal die
-            Leistung mit steigendem $\alpha$.
-                                          
+            Bei einem $\alpha$ von $0.1$ ist wiederum der höchste Punkt der Amplitude verschoben. 
+            Das Sinussignal ist leicht verzerrt, weshalb die Fouriertransformierte 
+            in der Simulation aus mehreren Deltaimpulsen besteht. Im
+            Amplitudenspektrum der Messung sehen wir ebenfalls mehrere Deltaimpulse.\\
+            
+            Interessant ist hier, dass das Amplitudenspektrum der Simulation
+            bei einem $\alpha$ von $0.9$ genau dem Amplitudenspektrum des
+            Sinussignals bei $\alpha = 0.1$ entspricht. Auch in der Messung
+            liefert die Fouriertransformation ein sehr ähnliches Ergebnis. Der
+            Grund dafür liegt in der Differenz des $\alpha$ zum Wert $0.5$
+            (beide Male $0.4$).
+            Das Signal wird in beiden Fällen zwar in unterschiedliche Richtungen,
+            dafür aber gleich stark verzerrt. Daher ändert sich die
+            Fouriertransformation nicht und das Amplitudenspektrum bleibt in
+            beiden Simulationen sowie Messungen relativ ähnlich.
+                                         
             \begin{center}
                   \begin{tabular}{|c|c|}
                   \hline
@@ -591,7 +606,7 @@ else
                    0.5 &  705 \\ \hline
                    0.9 &  706 \\ \hline           
                  \end{tabular}
-                       \caption{RMS des Rechtecksignals}
+                       \caption{RMS des Cosinussignals}
                         \label{tablelabel1}
                         
             \end{center}
